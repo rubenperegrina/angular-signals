@@ -1,0 +1,9 @@
+<div>
+  <input type="text" #input [value]="newTask()" (input)="newTask.set(input.value)" />
+  <button type="button" (click)="addTask()">Add Task</button>
+</div>
+<ul>
+  <li *ngFor="let task of tasks()">{{ task }}</li>
+</ul>
+<button (click)="changeFirstTask()">Change first task</button>
+<ng-container *ngIf="check()"></ng-container>
